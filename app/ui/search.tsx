@@ -11,9 +11,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   //executa quando usuário para de digitar, dando tempo 3s
    const handleSearch = useDebouncedCallback((term: string) => {
-    console.log(`Searching... ${term}`);
-
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1')
     if (term) {
       params.set("query", term);
     } else {
