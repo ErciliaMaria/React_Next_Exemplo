@@ -7,10 +7,6 @@ import { Suspense } from 'react';
 import { RevenueChartSkeleton } from '@/app/ui/skeletons';
 import { InvoiceSkeleton } from '@/app/ui/skeletons';
 
-interface LatestInvoices {
-  latestInvoices: Invoice[];
-}
-
 export default async function Page() {
     const latestInvoices = await fetchLatestInvoices();
     
